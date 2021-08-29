@@ -367,7 +367,7 @@ const DebugDrawView: React.FC<RouteModule.DebugDrawProps> = (props) => {
                 if (value.endsWith('*')) {
                   setPathWildcardRewrite('');
                   setPathWildcardRewriteVisible(true);
-                  setPathWildcardRewritePrefix(value ? value.replace('*', '') : '');
+                  setPathWildcardRewritePrefix(value.slice(0, value.length - 1));
                 } else {
                   setPathWildcardRewriteVisible(false);
                   setPathWildcardRewritePrefix(value);
